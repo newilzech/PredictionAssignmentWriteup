@@ -1,7 +1,7 @@
 ---
 title: Predicting Manner of Exercising from Accelerometer Measurements Using Machine
   Learning
-author: "Jodie Burchell"
+author: "Lee Kun Min(5 Feb 2017)"
 output: html_document
 ---
 
@@ -12,17 +12,6 @@ This project aims to predict in which manner participants completed a single exe
 * Lifting the dumbbell only halfway (__Class C__);  
 * Lowering the dumbbell only halfway (__Class D__); and  
 * Throwing the hips to the front (__Class E__).
-
-Measurements were taken using four 9 degrees of freedom Razor inertial measurement units (IMU), which were attached to the participant's chest, upper arm and forearm (glove) and the dumbbell (Figure 1). To build the study features from these devices, the authors of the study used a sliding window approach with different lengths from 0.5 second to 2.5 seconds, with 0.5 second overlap. In each step of the sliding window approach they calculated features on the Euler angles (roll, pitch and yaw), as well as the raw accelerometer, gyroscope and magnetometer readings. For the Euler angles of each of the four sensors they calculated eight features: mean, variance, standard deviation, max, min, amplitude, kurtosis and skewness.
-
-```{r study_diagram, fig.width=4.5, fig.height=4.5, echo=FALSE, fig.align = 'center'}
-library(png)
-library(grid)
-img <- readPNG("/Users/jburchell/Documents/Practical-Machine-Learning-Assignment/placement_of_measuring_devices.png")
-grid.raster(img)
-```
-
-**Figure 1.** Placement of the measuring devices.
 
 ## Loading in the data and splitting into training and testing sets
 
